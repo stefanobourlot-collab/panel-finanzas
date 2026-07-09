@@ -1,0 +1,98 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f9;
+    margin: 0;
+    padding: 40px 20px;
+    color: #333;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+
+.balance-card {
+    background: #2c3e50;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.balance-card h2 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 400;
+    opacity: 0.8;
+}
+
+#saldo-total {
+    margin: 10px 0 0 0;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.history-section h3 {
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    color: #34495e;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.transaccion-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    background: #fafafa;
+    margin-bottom: 8px;
+    border-radius: 6px;
+}
+
+.transaccion-item.ingreso {
+    border-left: 5px solid #2ecc71;
+}
+
+.transaccion-item.gasto {
+    border-left: 5px solid #e74c3c;
+}
+.form-section {
+    background: #fdfdfd;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #eef2f5;
+    margin-bottom: 25px;
+}
+.form-section h3 { margin-top: 0; color: #2c3e50; }
+form { display: flex; flex-direction: column; gap: 10px; }
+input, select, button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+button {
+    background: #3498db;
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+button:hover { background: #2980b9; }

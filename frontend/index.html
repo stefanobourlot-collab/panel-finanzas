@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Control - Finanzas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📊 Panel de Finanzas Personales</h1>
+        <div class="form-section">
+    <h3>Cargar Nuevo Movimiento</h3>
+    <form id="formulario-transaccion">
+        <select id="tipo" required>
+            <option value="INGRESO">🟢 Ingreso</option>
+            <option value="GASTO">🔴 Gasto</option>
+        </select>
+        <input type="text" id="categoria" placeholder="Categoría (Ej: Super, Inversiones)" required>
+        <input type="number" id="monto" step="0.01" placeholder="Monto ($)" required>
+        <input type="text" id="descripcion" placeholder="Descripción (Opcional)">
+        <button type="submit">Guardar Movimiento</button>
+    </form>
+</div>
+        
+        <div class="balance-card">
+            <h2>Saldo General</h2>
+            <p id="saldo-total">$0.00</p>
+        </div>
+
+        <div class="history-section">
+            <h3>Últimos Movimientos</h3>
+            <ul id="lista-transacciones">
+                </ul>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
