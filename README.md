@@ -68,21 +68,23 @@ Abrir el archivo index.html utilizando un servidor local (se recomienda la exten
 El panel interactivo se abrirá típicamente en: http://127.0.0.1:5500/frontend/index.html
 
 📂 Estructura del Repositorio
-Plaintext
+### 📂 Estructura del Repositorio
+
+```text
 panel-finanzas/
-│
-├── config/              # Configuración global del proyecto Django
-├── core/                # Aplicación principal de la API (Modelos, Vistas, Serializadores)
-├── frontend/            # Interfaz de usuario (HTML, CSS, JS)
+├── config/                 # Configuración global del proyecto Django
+├── core/                   # Aplicación principal de la API (Modelos, Vistas, Serializadores)
+├── frontend/               # Interfaz de usuario (HTML, CSS, JS)
 │   ├── index.html
 │   ├── style.css
 │   └── app.js
-├── env/                 # Entorno virtual de Python (ignorado en Git)
-├── manage.py            # Administrador de comandos de Django
-└── README.md            # Documentación del proyecto
+├── env/                    # Entorno virtual de Python (ignorado en Git)
+├── db.sqlite3              # Base de datos local (ignorado en Git)
+├── manage.py               # Administrador de comandos de Django
+└── README.md               # Documentación del proyecto
 
 
-3. Guardalo con `Ctrl + S`.
+
 
 ---
 
