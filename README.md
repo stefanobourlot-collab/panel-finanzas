@@ -66,6 +66,7 @@ La API estará disponible en: http://127.0.0.1:8000/api/transacciones/
 Dirigirse a la carpeta frontend/.
 Abrir el archivo index.html utilizando un servidor local (se recomienda la extensión Live Server de VS Code) para evitar restricciones de CORS del navegador.
 El panel interactivo se abrirá típicamente en: http://127.0.0.1:5500/frontend/index.html
+
 📂 Estructura del Repositorio
 Plaintext
 panel-finanzas/

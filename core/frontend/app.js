@@ -1,4 +1,5 @@
-const API_URL = 'http://127.0.0.1:8000/api/transacciones/';
+// Usamos una ruta relativa. Así funciona en tu PC y funcionará directo en internet
+const API_URL = '/api/transacciones/';
 
 async function cargarTransacciones() {
     try {
@@ -8,20 +9,17 @@ async function cargarTransacciones() {
         const lista = document.getElementById('lista-transacciones');
         const saldoElemento = document.getElementById('saldo-total');
         
-        // Limpiamos la lista por si las dudas
         lista.innerHTML = '';
         let saldoCalculado = 0;
 
         transacciones.forEach(t => {
-            // Creamos un elemento de lista <li> por cada movimiento
             const li = document.createElement('li');
             li.classList.add('transaccion-item', t.tipo.toLowerCase());
             
-            // Convertimos el monto string a número float
             const montoNum = parseFloat(t.monto);
 
-            // Calculamos el saldo acumulado según el tipo
-            if (t.tipo === 'INGRESO') {
+            // Convertimos a mayúsculas para que 'Ingreso', 'INGRESO' o 'ingreso' entren igual
+            if (t.tipo.toUpperCase() === 'INGRESO') {
                 saldoCalculado += montoNum;
                 li.innerHTML = `<span>🟢 ${t.categoria} - ${t.descripcion || ''}</span> <strong>+$${montoNum.toFixed(2)}</strong>`;
             } else {
@@ -32,10 +30,8 @@ async function cargarTransacciones() {
             lista.appendChild(li);
         });
 
-        // Actualizamos el saldo en la pantalla principal
         saldoElemento.textContent = `$${saldoCalculado.toFixed(2)}`;
         
-        // Le cambiamos el color al saldo según sea positivo o negativo
         if (saldoCalculado >= 0) {
             saldoElemento.style.color = '#2ecc71';
         } else {
@@ -47,12 +43,11 @@ async function cargarTransacciones() {
     }
 }
 
-// Ejecutamos la función apenas se termine de cargar la página
 document.addEventListener('DOMContentLoaded', cargarTransacciones);
-const formulario = document.getElementById('formulario-transaccion');
 
+const formulario = document.getElementById('formulario-transaccion');
 formulario.addEventListener('submit', async (e) => {
-    e.preventDefault(); // Evita que la página se recargue
+    e.preventDefault(); 
 
     const nuevaTransaccion = {
         tipo: document.getElementById('tipo').value,
@@ -71,8 +66,8 @@ formulario.addEventListener('submit', async (e) => {
         });
 
         if (respuesta.ok) {
-            formulario.reset(); // Limpia los campos del formulario
-            cargarTransacciones(); // Vuelve a leer la API para actualizar la pantalla
+            formulario.reset(); 
+            cargarTransacciones(); 
         } else {
             alert('Error al guardar el movimiento en el servidor');
         }
