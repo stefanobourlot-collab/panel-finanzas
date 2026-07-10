@@ -3,6 +3,9 @@
 Un sistema web interactivo para la gestión y control de finanzas personales. Este proyecto implementa una arquitectura desacoplada con un **Backend API REST** robusto y un **Frontend dinámico** que consume los datos en tiempo real.
 
 ---
+## 🚀 Demo en Vivo
+Podés ver la aplicación funcionando en internet haciendo clic en el siguiente enlace:
+🔗 **[Ver Panel de Finanzas en Vivo](https://panel-finanzas.onrender.com)**
 
 ## 🚀 Tecnologías Utilizadas
 
