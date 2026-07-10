@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-ms^o=z+9c#xsjw_fqrtmd+=98!wdy&zkyfqa)l$ceqq)62qnvv
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -47,6 +47,7 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',  # <- AGREGÁ ESTA LÍNEA ARRIBA DE TODO
     'django.middleware.security.SecurityMiddleware',
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -129,3 +130,4 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     BASE_DIR / "core" / "frontend"
 ]
+STATIC_ROOT = BASE_DIR / 'staticfiles'
